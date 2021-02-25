@@ -13,12 +13,6 @@ pip_name = 'pystrath-rfsoc'
 repo_board_folder = f'boards/{board}/{package_name}'
 data_files = []
 
-# check whether board is supported
-def check_env():
-    if not os.path.isdir(nb_dir):
-        raise ValueError(
-            "Directory {} does not exist.".format(nb_dir))
-
 # copy common notebooks to jupyter home
 def copy_common_notebooks():
     src_dir = os.path.join(f'common')
@@ -51,7 +45,6 @@ def copy_overlays():
     data_files.extend(
         [os.path.join("..", dst_ol_dir, f) for f in os.listdir(dst_ol_dir)])
 
-check_env()
 copy_common_notebooks()
 if os.path.isdir(f'boards/{board}'):
     copy_board_notebooks()
