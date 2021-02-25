@@ -15,14 +15,20 @@ data_files = []
 
 # check whether board is supported
 def check_env():
-    if not os.path.isdir(f'boards/{board}'):
-        raise ValueError("Board {} is not supported.".format(board))
     if not os.path.isdir(nb_dir):
         raise ValueError(
             "Directory {} does not exist.".format(nb_dir))
 
+# copy common notebooks to jupyter home
+def copy_common_notebooks():
+    src_dir = os.path.join(f'common')
+    dst_dir = os.path.join(nb_dir, 'rfsoc-notebooks')
+    if os.path.exists(dst_dir):
+        shutil.rmtree(dst_dir)
+    copy_tree(src_dir, dst_dir)
+
 # copy unique notebooks to jupyter home
-def copy_notebooks():
+def copy_board_notebooks():
     src_dir = os.path.join(f'boards/{board}/{package_name}/notebooks')
     dst_dir = os.path.join(nb_dir, 'rfsoc-notebooks')
     if os.path.exists(dst_dir):
@@ -46,9 +52,11 @@ def copy_overlays():
         [os.path.join("..", dst_ol_dir, f) for f in os.listdir(dst_ol_dir)])
 
 check_env()
-copy_notebooks()
-copy_drivers()
-copy_overlays()
+copy_common_notebooks()
+if os.path.isdir(f'boards/{board}'):
+    copy_board_notebooks()
+    copy_drivers()
+    copy_overlays()
 
 setup(
     name=package_name,
