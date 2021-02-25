@@ -23,8 +23,8 @@ def copy_common_notebooks():
 
 # copy unique notebooks to jupyter home
 def copy_board_notebooks():
-    src_dir = os.path.join(f'boards/{board}/{package_name}/notebooks')
-    dst_dir = os.path.join(nb_dir, 'rfsoc-notebooks')
+    src_dir = os.path.join(f'boards/{board}/{package_name}/notebooks/rfsoc_dataconverters')
+    dst_dir = os.path.join(nb_dir, 'rfsoc-notebooks', 'rfsoc_dataconverters')
     if os.path.exists(dst_dir):
         shutil.rmtree(dst_dir)
     copy_tree(src_dir, dst_dir)
