@@ -23,7 +23,7 @@ The RFSoC notebooks can be installed on to your development board by running a s
   <img src="./open_terminal_window.jpg" width="50%" height="50%" />
 <p/>
 
-* Now simply run the code below that will install the frequency planner to your system.
+* Now simply run the code below that will install the package to your system.
 
 ```sh
 pip3 install git+https://github.com/strath-sdr/rfsoc_notebooks
