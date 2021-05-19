@@ -1,4 +1,4 @@
-<img src="strathclyde_banner.png" width="100%">
+<img src="strathsdr_banner.png" >
 
 # RFSoC Introductory Notebooks
 A collection of RFSoC introductory notebooks. This repository is only compatible with [PYNQ images v2.6](https://github.com/Xilinx/PYNQ/releases) for the [ZCU111](https://www.xilinx.com/products/boards-and-kits/zcu111.html) and [RFSoC2x2](http://rfsoc-pynq.io/).
