@@ -10,8 +10,6 @@ package_name = 'pystrath_rfsoc'
 pip_name = 'pystrath-rfsoc'
 data_files = []
 
-for f in /etc/profile.d/*.sh; do source $f; done
-
 # copy common notebooks to jupyter home
 def copy_common_notebooks():
     src_dir = os.path.join(f'common')
