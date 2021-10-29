@@ -1,7 +1,7 @@
 <img src="strathsdr_banner.png" >
 
 # RFSoC Introductory Notebooks
-A collection of RFSoC introductory notebooks. This repository is only compatible with [PYNQ images v2.6](https://github.com/Xilinx/PYNQ/releases) for the [ZCU111](https://www.xilinx.com/products/boards-and-kits/zcu111.html) and [RFSoC2x2](http://rfsoc-pynq.io/).
+A collection of RFSoC introductory notebooks. This repository is only compatible with [PYNQ images v2.7](https://github.com/Xilinx/PYNQ/releases) for the [ZCU111](https://www.xilinx.com/products/boards-and-kits/zcu111.html) and [RFSoC2x2](http://rfsoc-pynq.io/).
 
 <img src="./nb_rf_data_converters.png" width="25%" align="left" />
 <img src="./nb_rf_spectrum.png" width="25%" align="left" />
@@ -9,7 +9,7 @@ A collection of RFSoC introductory notebooks. This repository is only compatible
 
 ## PYNQ Quick Start
 The RFSoC notebooks can be installed on to your development board by running a simple line of code in a command terminal. **However, you will need to connect your board to the internet.** Follow the instructions below to install the notebooks now.
-* Power on your RFSoC2x2 or ZCU111 development board with an SD Card containing a fresh PYNQ v2.6 image.
+* Power on your RFSoC2x2 or ZCU111 development board with an SD Card containing a fresh PYNQ v2.7 image.
 * Navigate to Jupyter Labs by opening a browser (preferably Chrome) and connecting to `http://<board_ip_address>:9090/lab`.
 * We need to open a terminal in Jupyter Lab. Firstly, open a launcher window as shown in the figure below:
 
