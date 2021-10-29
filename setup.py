@@ -22,10 +22,10 @@ copy_common_notebooks()
 
 setup(
     name=package_name,
-    version='0.1.1',
+    version='0.2.0',
     install_requires=[
-        'plotly==4.5.2',
-        'pynq==2.6'
+        'plotly==5.1.0',
+        'pynq==2.7'
     ],
     author="David Northcote",
     packages=find_packages(),
